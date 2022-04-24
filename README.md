@@ -1,18 +1,8 @@
-## Wafer Fault Detection Prediction API
+## Wafer Fault Detection 
 
 #### App URL :  https://wafer-fault-app-bob.herokuapp.com/
 #### Docker Image to pull : docker pull abhishekmazudmar94/waferbob2694
 
-#### API testing UI 
-If the Default Prdiction Route is clicked, then the app picks up the location where the batch data is available for prediction.
-The Display window also shows some of the predictions in the format "{<wafer>:<wafer ID>,<Prediction>:-1/+1}"
-![](https://github.com/mazumdarabhishek/Wafer_Fault_Detection_App/blob/main/LLD/Screenshots/Screenshot%20at%202021-02-25%2011-52-44.png)
-    
-
-#### Pipeline Design Overview
-This image explains the pipelines through wihich the data will flow incase of training as well as prediction. 
-Based on this design, the code is then prepared in a modular fashion meeting the pipeline requirements.
-![](https://github.com/mazumdarabhishek/Wafer_Fault_Detection_App/blob/main/LLD/Screenshots/system_design.jpg)
 
 #### Problem Statement:
     
@@ -34,6 +24,19 @@ Machine Learning approcah has been taken to make a binary classification by cons
 in batches as per region. This project will act as an API for the client's Web enterprice where the location of the 
 batch files will be provided as an input to the API and this API will run all the pre processing steps of Data Science
 Life Cycle and produce Predictions as a csv file and save it in a specified folder for furhter usage of the maitenance team
+    
+
+#### API testing UI 
+If the Default Prdiction Route is clicked, then the app picks up the location where the batch data is available for prediction.
+The Display window also shows some of the predictions in the format "{<wafer>:<wafer ID>,<Prediction>:-1/+1}"
+![](https://github.com/mazumdarabhishek/Wafer_Fault_Detection_App/blob/main/LLD/Screenshots/Screenshot%20at%202021-02-25%2011-52-44.png)
+    
+
+#### Pipeline Design Overview
+This image explains the pipelines through wihich the data will flow incase of training as well as prediction. 
+Based on this design, the code is then prepared in a modular fashion meeting the pipeline requirements.
+![](https://github.com/mazumdarabhishek/Wafer_Fault_Detection_App/blob/main/LLD/Screenshots/system_design.jpg)
+
     
 #### Data Description
     
