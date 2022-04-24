@@ -108,9 +108,7 @@ Training:
   A .csv file will be then saved in a locaton from where it can be doenloaded and used for maintenance activity. 
 
 
-#### Deployment
-
-A dockerised has been followed and CI/CD pipeline is establised using circleci. The Aplication is hosted on Heroku. 
+ 
 
 
 
