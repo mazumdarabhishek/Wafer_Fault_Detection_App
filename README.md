@@ -1,12 +1,18 @@
 ## Wafer Fault Detection Prediction API
 
-### App URL :  https://wafer-fault-app-bob.herokuapp.com/
-### Docker Image to pull : docker pull abhishekmazudmar94/waferbob2694
+#### App URL :  https://wafer-fault-app-bob.herokuapp.com/
+#### Docker Image to pull : docker pull abhishekmazudmar94/waferbob2694
 
-### API testing UI 
+#### API testing UI 
 If the Default Prdiction Route is clicked, then the app picks up the location where the batch data is available for prediction.
 The Display window also shows some of the predictions in the format "{<wafer>:<wafer ID>,<Prediction>:-1/+1}"
 ![](https://github.com/mazumdarabhishek/Wafer_Fault_Detection_App/blob/main/LLD/Screenshots/Screenshot%20at%202021-02-25%2011-52-44.png)
+    
+
+#### Pipeline Design Overview
+This image explains the pipelines through wihich the data will flow incase of training as well as prediction. 
+Based on this design, the code is then prepared in a modular fashion meeting the pipeline requirements.
+![](https://github.com/mazumdarabhishek/Wafer_Fault_Detection_App/blob/main/LLD/Screenshots/system_design.jpg)
 
 #### Problem Statement:
     
@@ -21,8 +27,8 @@ The Goals of this Project are:
   maintenance capabilities of the business
 
 Labeled data is provided by the client having two classes +1 & -1 where:  
-+1: Means that the wafer is in a working condition and it doesn't need to be replaced.
--1: Means that the wafer is faulty and it needa to be replaced.
+- +1: Means that the wafer is in a working condition and it doesn't need to be replaced.
+- -1: Means that the wafer is faulty and it needa to be replaced.
 
 Machine Learning approcah has been taken to make a binary classification by consuming the wafer sensor data produced 
 in batches as per region. This project will act as an API for the client's Web enterprice where the location of the 
@@ -94,7 +100,7 @@ Training:
   phase are kept as a choice and the model having the highest AUC_ROC_Score will be selected for that specific
   cluster and then will be saved in a model directory to be used for model predicition. 
 
-### Prediction 
+#### Prediction 
 
 
   Same pipeline as that of Training will be executed and then depending on the cluster number, sub_batches of 
@@ -102,7 +108,7 @@ Training:
   A .csv file will be then saved in a locaton from where it can be doenloaded and used for maintenance activity. 
 
 
-### Deployment
+#### Deployment
 
 A dockerised has been followed and CI/CD pipeline is establised using circleci. The Aplication is hosted on Heroku. 
 
